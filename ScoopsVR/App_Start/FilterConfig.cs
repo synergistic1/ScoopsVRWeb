@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace ScoopsVR
+namespace ScoopsVRWeb
 {
     public class FilterConfig
     {

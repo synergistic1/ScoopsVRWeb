@@ -5,18 +5,13 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace ScoopsVR
+namespace ScoopsVRWeb
 {
     public class RouteConfig
     {
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-            routes.MapRoute(
-                name: "Credits",
-                url: "Credits",
-                defaults: new { controller = "Home", action = "Credits", id = UrlParameter.Optional }
-            );
             routes.MapRoute(
                 name: "Default",
                 url: "{action}/{id}",

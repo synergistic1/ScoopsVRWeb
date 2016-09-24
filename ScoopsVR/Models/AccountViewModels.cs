@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace ScoopsVR.Models
+namespace ScoopsVRWeb.Models
 {
     public class ExternalLoginConfirmationViewModel
     {
