@@ -14,8 +14,8 @@
     </style>
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -27,23 +27,25 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Download", "Download", "Home")</li>
-                    <li>@Html.ActionLink("Credits", "Credits", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                    <li>@Html.ActionLink("Trello", "Trello", "Home")</li>
+                    <li><a href="#About">About</a></li>
+                    <li><a href="#RoadMap">RoadMap</a></li>
+                    <li><a href="#Download">Download</a></li>
+                    <li><a href="#Trello">Trello</a></li>
+                    <li><a href="#Credits">Credits</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="container body-content">
-        <div class="header-spacer"></div>
+
+    <div class="container-fluid body-content">
         @RenderBody()
         <hr />
         <footer>
-
-            <p>&copy; @DateTime.Now.Year - ScoopsVR - <a href="mailto:dev@scoopsvr.com">dev@scoopsvr.com</a> - <a href="https://twitter.com/cinder0us" class="twitter-follow-button" data-show-count="false" style="vertical-align:bottom;">Follow @@cinder0us</a></p>
-            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            <div class="container">
+                <p>&copy; @DateTime.Now.Year - ScoopsVR - <a href="mailto:dev@scoopsvr.com">dev@scoopsvr.com</a> - <a href="https://twitter.com/cinder0us" class="twitter-follow-button" data-show-count="false" style="vertical-align:bottom;">Follow @@cinder0us</a></p>
+                <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
         </footer>
     </div>
 

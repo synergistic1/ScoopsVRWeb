@@ -4,21 +4,56 @@
     ViewBag.Title = "ScoopsVR";
 }
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="alert alert-success" role="alert">
-            Initial roadmap has been posted! Check it out @Html.ActionLink("here!", "About", "Home")
+<div class="row row-strawberry" id="About">
+    <div class="container">
+        <div class="col-xs-12">
+            <div class="alert alert-success" role="alert">
+                Initial roadmap has been posted! Check it out @Html.ActionLink("here!", "About", "Home")
+            </div>
         </div>
-    </div>
-    <div class="col-md-12">
-        <img class="img-responsive banner-image" src="~/Content/Images/bannerImage.jpg" />
-    </div>
-    @foreach (var post in Model.Posts)
-    {
-        <div class="col-md-12">
-            @Html.Partial("_Post", post)
+        <div class="col-xs-12">
+            <img class="img-responsive banner-image" src="~/Content/Images/bannerImage.jpg" />
         </div>
-    }
-
-
+        @foreach (var post in Model.Posts)
+        {
+            <div class="col-xs-12">
+                @Html.Partial("_Post", post)
+            </div>
+        }
+    </div>
+    <div id="RoadMap"></div>
 </div>
+<div class="row row-vanilla">
+    <div class="container">
+        @Html.Partial("_Roadmap")
+    </div>
+    <div id="Download"></div>
+</div>
+<div class="row row-chocolate">
+    <div class="container">
+        @Html.Partial("_Download")
+    </div>
+    <div id="Trello"></div>
+</div>
+<div class="row row-strawberry" >
+    <div class="container">
+        @Html.Partial("_Trello")
+    </div>
+    <div id="Credits"></div>
+</div>
+<div class="row row-vanilla">
+    <div class="container">
+        @Html.Partial("_Credits")
+    </div>
+    <div id="Contact"></div>
+</div>
+<div class="row row-chocolate" >
+    <div class="container">
+        @Html.Partial("_Contact")
+    </div>
+</div>
+
+
+
+
+

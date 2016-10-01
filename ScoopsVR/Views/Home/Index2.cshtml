@@ -1,0 +1,24 @@
+﻿@model ScoopsVRWeb.Models.PostViewModel
+
+@{
+    ViewBag.Title = "ScoopsVR";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="alert alert-success" role="alert">
+            Initial roadmap has been posted! Check it out @Html.ActionLink("here!", "About", "Home")
+        </div>
+    </div>
+    <div class="col-md-12">
+        <img class="img-responsive banner-image" src="~/Content/Images/bannerImage.jpg" />
+    </div>
+    @foreach (var post in Model.Posts)
+    {
+        <div class="col-md-12">
+            @Html.Partial("_Post", post)
+        </div>
+    }
+
+
+</div>
