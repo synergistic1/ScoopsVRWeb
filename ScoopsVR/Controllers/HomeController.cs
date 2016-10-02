@@ -2,23 +2,31 @@
 using ScoopsVRWeb.Models;
 using ScoopsVRWeb.Classes;
 using System.Collections.Generic;
+using System;
 
 namespace ScoopsVRWeb.Controllers
 {
     public class HomeController : Controller
     {
         WordPressConnector wpc;
+        List<Post> posts;
 
-        public ActionResult Index()
+
+        public HomeController()
         {
             wpc = new WordPressConnector();
-            List<Post> posts = wpc.GetWordPressPosts();
+        }
+        public ActionResult Index()
+        {
+            WordPressBlog blog = wpc.GetBlog();
+            posts = blog.GetTop3Posts();
             PostViewModel postViewModel = new PostViewModel();
+            foreach (var post in posts)
+            {
+                post.excerpt = post.excerpt.CharacterLimit(75);
+            }
             postViewModel.Posts = posts;
 
-            //post.Title = "Getting Start - Demo Release!";
-            //post.Body = "Welcome to the Scoops homepage! I'm very excited to say that the official demo is now out! Check out the downloads section for more information. This is a brand new area for me. I've never released any kind of game to the public that wasn't part of a jam and I've never built anything in VR before so I'm very excited! I'll be working to flesh out this site in the coming week and get a preliminary roadmap up to make my goals clear.In the mean time I'd love to hear your feedback! Check out the contact section for various ways to get in touch.";
-            //post.PostDate = "9.19.2016";
             return View(postViewModel);
         }
 
@@ -47,9 +55,16 @@ namespace ScoopsVRWeb.Controllers
             return View();
         }
 
-        public ActionResult Test()
+        [HttpPost]
+        [AllowAnonymous]
+        public JsonResult GetPostByID(string id)
         {
-            return View();
+            Post post = new Post();
+            post.content = "Post Not Found";
+            WordPressBlog blog = wpc.GetBlog();
+            post = blog.GetPostByID(Int32.Parse(id));
+            return Json(post);
         }
+
     }
 }

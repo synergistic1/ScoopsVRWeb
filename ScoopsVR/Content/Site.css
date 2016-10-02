@@ -1,4 +1,16 @@
-﻿body {
+﻿/*
+    Color Pallete
+
+    Chocolate: #6B3E26
+    Strawberry: #FFC5D9
+    Vanilla: #FFFFFF
+    Green: #C2F2D0
+    Yellow: #FDF5C9
+    Orange: #FFCB85
+*/
+
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }
@@ -35,4 +47,10 @@ textarea {
 
 .header-spacer {
     margin-top: 10px;
+}
+
+
+.panel-footer:hover{
+    background-color: #6B3E26;
+    color: #FFC5D9;
 }

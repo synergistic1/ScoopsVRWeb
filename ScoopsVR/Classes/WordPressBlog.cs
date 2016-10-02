@@ -10,6 +10,16 @@ namespace ScoopsVRWeb.Classes
         public int found { get; set; }
         public Post[] posts { get; set; }
         public Meta meta { get; set; }
+
+        public Post GetPostByID(int id)
+        {
+            Post targetPost = posts.FirstOrDefault(n => n.ID == id);
+            return targetPost;
+        }
+        public List<Post> GetTop3Posts()
+        {
+            return posts.OrderByDescending(x => x.date).Take(3).Select(x => x).ToList();
+        }
     }
 
     public class Meta
@@ -67,6 +77,7 @@ namespace ScoopsVRWeb.Classes
         public Capabilities capabilities { get; set; }
         public Other_Urls other_URLs { get; set; }
     }
+
 
     public class Author
     {
@@ -200,5 +211,7 @@ namespace ScoopsVRWeb.Classes
     public class Other_Urls
     {
     }
+
+
 
 }

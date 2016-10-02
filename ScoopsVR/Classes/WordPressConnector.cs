@@ -2,25 +2,25 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
+using System.Web.Services;
 
 namespace ScoopsVRWeb.Classes
 {
     public class WordPressConnector
     {
-
-        public List<Post> GetWordPressPosts()
+        private WordPressBlog blog;
+        public WordPressBlog GetBlog()
         {
-            using (WebClient webClient = new WebClient())
+            if (blog == null)
             {
-                string blogUrl = @"https://public-api.wordpress.com/rest/v1.1/sites/scoopsdevblog.wordpress.com/posts/";
-                string response = webClient.DownloadString(blogUrl);
-
-                WordPressBlog blogPosts = JsonConvert.DeserializeObject<WordPressBlog>(response);
-
-                List<Post> posts = blogPosts.posts.OrderByDescending(x => x.date).Take(3).Select(x => x).ToList();
-
-                return posts;
+                using (WebClient webClient = new WebClient())
+                {
+                    string blogUrl = @"https://public-api.wordpress.com/rest/v1.1/sites/scoopsdevblog.wordpress.com/posts/";
+                    string response = webClient.DownloadString(blogUrl);
+                    blog = JsonConvert.DeserializeObject<WordPressBlog>(response);
+                }
             }
+            return blog;
         }
     }
 }

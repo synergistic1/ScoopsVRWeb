@@ -15,10 +15,14 @@
     </div>
     @foreach (var post in Model.Posts)
     {
-        <div class="col-md-12">
+        <div class="col-md-3">
             @Html.Partial("_Post", post)
         </div>
     }
+
+    <div id="dialog" title="">
+        <p></p>
+    </div>
 
 
 </div>
