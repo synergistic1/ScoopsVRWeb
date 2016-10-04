@@ -227,7 +227,6 @@
     <Content Include="Views\Home\Download.cshtml" />
     <Content Include="Views\Home\_Post.cshtml" />
     <Content Include="Views\Home\Trello.cshtml" />
-    <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\_Roadmap.cshtml" />
     <Content Include="Views\Home\_Contact.cshtml" />
