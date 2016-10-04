@@ -66,6 +66,10 @@ body{
 .navbar{
     box-shadow: 0px 0px 25px #888888
 }
+ .navbar-left img{
+     padding-left: 5px;
+ }
+
 .panel-body{
     font-weight: normal;
 }
@@ -129,7 +133,7 @@ footer{
 }
 
 .row-chocolate a{
-    color:lightpink;
+    color: #FFC5D9;
 }
 
 
@@ -146,13 +150,13 @@ footer{
 }
 
 .row-strawberry{
-    background-color: lightpink;
+    background-color: #FFC5D9;
 }
 
 .row-strawberry .alert-success{
     background-color: white;
     border-color: #ffe3e7;
-    color: lightpink;
+    color: #FFC5D9;
     font-weight: bold;
     box-shadow: 0px 0px 25px #888888;
 }
@@ -174,7 +178,7 @@ footer{
 }
 
 .row-strawberry a{
-    color:#f9cafb;
+    color: #ffffff;
 }
 
 .row-strawberry h2{
@@ -182,7 +186,7 @@ footer{
 }
 
 .row-strawberry .btn-primary{
-    background-color: lightpink;
+    background-color: #FFC5D9;
     border-color: white;
     color: white;
 }
@@ -191,7 +195,7 @@ footer{
 .row-strawberry .btn-primary:hover{
     background-color: white;
     border-color: white;
-    color: lightpink;
+    color: #FFC5D9;
 }
 .row-strawberry p{
     color: grey;

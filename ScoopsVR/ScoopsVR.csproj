@@ -183,11 +183,11 @@
     <Content Include="Content\Images\bannerImage.jpg" />
     <Content Include="Content\Images\brandImage.jpg" />
     <Content Include="Content\Images\roadmap.png" />
+    <Content Include="favicon.ico" />
     <Content Include="Content\Images\scoops-icon.png" />
     <Content Include="Content\Images\scoops-icon.svg" />
     <Content Include="Content\Images\scoops-logo-color.png" />
     <Content Include="Content\Images\scoops-logo-color.svg" />
-    <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
