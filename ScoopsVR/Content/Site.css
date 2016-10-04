@@ -133,7 +133,11 @@ footer{
 }
 
 .row-chocolate a{
+<<<<<<< HEAD
     color: #FFC5D9;
+=======
+    color:#ffc5d9;
+>>>>>>> refs/heads/OnePager
 }
 
 
@@ -150,13 +154,21 @@ footer{
 }
 
 .row-strawberry{
+<<<<<<< HEAD
     background-color: #FFC5D9;
+=======
+    background-color: #ffc5d9;
+>>>>>>> refs/heads/OnePager
 }
 
 .row-strawberry .alert-success{
     background-color: white;
     border-color: #ffe3e7;
+<<<<<<< HEAD
     color: #FFC5D9;
+=======
+    color: #ffc5d9;
+>>>>>>> refs/heads/OnePager
     font-weight: bold;
     box-shadow: 0px 0px 25px #888888;
 }
@@ -186,7 +198,11 @@ footer{
 }
 
 .row-strawberry .btn-primary{
+<<<<<<< HEAD
     background-color: #FFC5D9;
+=======
+    background-color: #ffc5d9;
+>>>>>>> refs/heads/OnePager
     border-color: white;
     color: white;
 }
@@ -195,7 +211,11 @@ footer{
 .row-strawberry .btn-primary:hover{
     background-color: white;
     border-color: white;
+<<<<<<< HEAD
     color: #FFC5D9;
+=======
+    color: #ffc5d9;
+>>>>>>> refs/heads/OnePager
 }
 .row-strawberry p{
     color: grey;
